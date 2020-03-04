@@ -48,7 +48,10 @@
 		var x = e.x;
 		var y = e.y;
 		x -= canvas.offsetLeft;
-		y -= canvas.offsetTop;
+		y -= canvas.offsetTop;\
+		x+=window.pageXOffset;
+		y+=window.pageYOffset;
+		
 		var square
 		var result
 		square = squareClicked(x,y,canvas.width,canvas.height)
